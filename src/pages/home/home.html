@@ -1,0 +1,689 @@
+<ion-header >
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Te Amo Osi</ion-title>
+  </ion-navbar>
+
+   <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="segmento" (ionChange)="onSegmentChanged($event)" color="secondary"  >
+      <ion-segment-button  value="uno">
+        Primer Año
+      </ion-segment-button>
+      <ion-segment-button value="dos">
+       Segundo Año
+      </ion-segment-button>
+      <ion-segment-button value="tres">
+        Muchos más 
+      </ion-segment-button>
+      
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+ <ion-slides #mySlider (ionSlideDidChange)="onSlideChanged($event)"  [ngSwitch]="segmento" >
+ 
+
+ <ion-slide>
+ <div *ngSwitchCase="'uno'"  id="uno_dieta" >
+ <ion-chip item-start  color="secondary"><ion-label>El encuentro</ion-label></ion-chip> 
+
+  <ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Caminadora y Facebook</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('l1')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+ 
+  <ion-card-content>
+   Desde el primer dia que  te vi en la caminadora fue como ver a una diosa haciendo ejercicio 
+   Fue el mejor dia de mi vida ya que después de eso mi vida cambio para bien. Cuando un 4 de nov
+   me agregaste a facebook preguntando que si conocía a Orlando sabía que había interes en mi
+ </ion-card-content>
+</ion-card>
+
+<ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Toscalia y noches </b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('l2')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+  
+  <ion-card-content>
+   Me encantó esta etapa fue como ir a la playa y conocer cada concha de ella ya que me abriste tus puertas
+   me dijiste quien eras como eras que te gustaba fue hermoso ya que no faltaste ni un dia. Me gustaba hacer reir depués de un largo día de trabajo
+   se que era raro para ti pero para mi fue hermoso saber de ti ver ese brillo cuando te hacía feliz aunque en tu casa y trabajo estabas triste
+ </ion-card-content>
+</ion-card>
+
+<ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Primeras Salidas</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('l3')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+ 
+    <ion-badge >Galerías</ion-badge> 
+    <ion-badge >Paseo en la Juarez</ion-badge> 
+     <ion-badge >Fuertes</ion-badge> 
+  
+  <ion-card-content>
+   Esas dos salidas fueron importantes para un buen inicio ya que podia ver como pensabas y que me conocieras tal cual como soy
+   se que fue difícil salir pero con eso fue más que suficiente. La salida a los fuertes fue importante ya que nunca había estado tan lejos en puebla
+   Se que estaba en un error pero en la salida de los fuertes te quería decir que fueras mi novia
+ </ion-card-content>
+</ion-card>
+<ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Tus frases</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('l4')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+     <ion-item href="#">
+        <ion-badge >Las olas tras de ti</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >No me gusta que llueva todos los dias </ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >Lo que no te suma te multiplica</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >Mi chef favorito</ion-badge>
+     </ion-item>
+    
+   
+  
+  <ion-card-content>
+   La hora de la comida era la mejor ya que platicabas de todo 
+ </ion-card-content>
+</ion-card>
+
+ <ion-chip item-start  color="secondary"><ion-label>El conocernos más a fondo</ion-label></ion-chip> 
+<ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>El entrenamiento</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('l5')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+     <ion-item href="#">
+        <ion-badge >Viernes</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >Ser fuerte</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >Miercoles</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >Osi Feliz</ion-badge>
+     </ion-item>
+    
+   
+  
+  <ion-card-content>
+Esta estapa fue despues de las vacaciones yo te extaba mucho y te hablaba todos los dias.
+Se que pasamos cosas no tan felices pero eso ayudó a ser lo que hoy somos
+Los viernes te hacía muy feliz y los miercoles te iba a ver a tu casa. siempre esperaba los viernes para salir al depa jaja
+y luego a ingles eso era hermoso, ya que te daba masaje  
+ </ion-card-content>
+</ion-card>
+<ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Ir a tu casa y tu al depa</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('l6')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+     <ion-item href="#">
+        <ion-badge >Un tesoro</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >Miedo</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >White Tiger</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >El mejor cumple</ion-badge>
+     </ion-item>
+    
+   
+  
+  <ion-card-content>
+Se que no era lo que esperabas, pero mi cumple la pase muy bien. El escondernos de Javier me gustaba pero me daba miedo
+Todos los miercoles terminaba cansado por las practicas y luego ir hasta Bosques era mucho yo salía y me apuraba a hacerte una comida
+asi me dejabas ir a verte y me platicabas todo lo que pasaba  
+ </ion-card-content>
+</ion-card>
+
+<ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>TE AMO</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('l7')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+     <ion-item href="#">
+        <ion-badge >Verano</ion-badge>
+     </ion-item>  
+   
+  
+  <ion-card-content>
+Este acontecimiento no lo podía dejar, fue de lo más bonito que me ha pasado el primer te amo despues de mucho tiempo, además de vivir una semana
+llena de ti como salir más ir de viaje eso fue hermoso además me dabas besitos 
+ </ion-card-content>
+</ion-card>
+
+
+
+
+</div>
+    
+
+
+</ion-slide>
+
+<ion-slide >
+<div  *ngSwitchCase="'dos'"   >
+   <ion-chip item-start  color="secondary"><ion-label>El camino al Corazón de Osi</ion-label></ion-chip> 
+
+
+
+   <ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>La Santa</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('l8')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+     <ion-item href="#">
+        <ion-badge >Fin de semana feliz</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >Clases de mate</ion-badge>
+     </ion-item>
+     
+    
+   
+  
+  <ion-card-content>
+Pesaba que no sería buena idea pero fue de lo mejor ya que te pude ver más tiempo simpre te doy masaje y cuando estabas en m de mar las cosas 
+se cambiaron más pero yo siempre te he amado desde el primer dia 
+ </ion-card-content>
+</ion-card>
+
+  <ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>El depa</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('l9')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+     <ion-item href="#">
+        <ion-badge >Vivir</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >Gym</ion-badge>
+     </ion-item>
+     
+    
+   
+  
+  <ion-card-content>
+Siempre me has apoyado y con esto de la maestría y tu proceso de maduración fue una etapa dificil de nuevo pero 
+al final hemos logrado sobrevivir hemos creado algo bueno se que fue dificil pero verte dormir es lo mejor depertar a tu lado 
+ser quien te haga de comer ayudarte con las tareas es le mejor 
+ </ion-card-content>
+</ion-card>
+  <ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>El depa</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('l10')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+     <ion-item href="#">
+        <ion-badge >Vivir</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >Gym</ion-badge>
+     </ion-item>
+     
+    
+   
+  
+  <ion-card-content>
+Siempre me has apoyado y con esto de la maestría y tu proceso de maduración fue una etapa dificil de nuevo pero 
+al final hemos logrado sobrevivir hemos creado algo bueno se que fue dificil pero verte dormir es lo mejor depertar a tu lado 
+ser quien te haga de comer ayudarte con las tareas es le mejor 
+ </ion-card-content>
+</ion-card>
+
+
+  <ion-chip item-start  color="secondary"><ion-label>Verano las cosas mejoraron</ion-label></ion-chip> 
+
+    <ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Respeto</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('l11')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+     <ion-item href="#">
+        <ion-badge >El amar</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >Compartir</ion-badge>
+     </ion-item>
+     
+    
+   
+  
+  <ion-card-content>
+Muchas cosas pasaron pero al final se que hemos consolidado algo bueno. En este verano descubri material desing jajaja
+descubri que programar era lo mio y de nuevo mi osi regreso. Ya otra vez llegabas todas las noches recordaba como los primeros meses
+Es lo mejor me encastas de verdad eres de lo mejor que me ha pasado. El vivier cosas dificiles nos han hecho muy fuetes el darte masaje y hacete feliz es lo mejor para mi. Yo tambien he cometido errores perdoname solo quiero estar contigo y ser feliz estar tranquilo y vivir cosas bonitas a tu lado 
+ </ion-card-content>
+</ion-card>
+
+    <ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Masajes</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('m1')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+     <ion-item href="#">
+        <ion-badge >Arnica</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >Pies</ion-badge>
+     </ion-item>
+     
+    
+   
+  
+  <ion-card-content>
+Cuando te doy masaje me siento como en las nuves pues eres muy feliz, porque te duermes y me dejas programar jajaja
+porque descansas y es lo que más te gusta 
+ </ion-card-content>
+</ion-card>
+    <ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Tacos</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('m2')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+     <ion-item href="#">
+        <ion-badge >Cacahuates</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >TL</ion-badge>
+     </ion-item>
+     
+    
+   
+  
+  <ion-card-content>
+Me encanta ir a comer grasa contigo es lo mejor aunque luego te quejes pero es de mis momentos
+favoritos me gusta ver tus ojos cuando comes 
+ </ion-card-content>
+</ion-card>
+
+    <ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>GYM</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('m3')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+     <ion-item href="#">
+        <ion-badge >InFitness</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >No a los miercoles</ion-badge>
+     </ion-item>
+     
+    
+   
+  
+  <ion-card-content>
+Me gusta verte entrenar me gusta darte besos sudando. Te quiero felicitar pues cada día tienes un mejor cuerpo.
+Me gusta que te guste criticar a los gordos y patas de pollo conmigo.
+Megusta caminar y platicar camino al gym
+ </ion-card-content>
+</ion-card>
+
+    <ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Dormir </b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('m4')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+     <ion-item href="#">
+        <ion-badge >Todo el dia</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >Siempre</ion-badge>
+     </ion-item>
+     
+    
+   
+  
+  <ion-card-content>
+me gusta poner mi pierna en tu espalda
+es hermoso ver como duermes 
+es hermoso que me des besos cuando duermo
+Aunque nunca te quieras despertar y me pidas lo minimo
+ </ion-card-content>
+</ion-card>
+    <ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Reposo </b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('m5')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+     <ion-item href="#">
+        <ion-badge >Nariz</ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >Espalda</ion-badge>
+     </ion-item>
+     
+    
+   
+  
+  <ion-card-content>
+El cuidarte cuando más lo necesitas es lo mejor para mi ya que me haces ver lo fuerte que eres y lo valiosa que eres para mi 
+eres muy inteligente hermosa
+ </ion-card-content>
+</ion-card>
+
+
+
+  
+</div>
+   
+ 
+ </ion-slide>
+
+<ion-slide >
+<div  *ngSwitchCase="'tres'"   >
+    <ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Futuro</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('l12')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+     <ion-item href="#">
+        <ion-badge >Hoy </ion-badge>
+     </ion-item>
+     <ion-item href="#">
+        <ion-badge >Mañana</ion-badge>
+     </ion-item>
+     
+    
+   
+  
+  <ion-card-content>
+Esta carta es muy sincera y con esto quiero celebrar nuestros dos años. Osi te amo siempre que estoy contigo me siento 
+feliz lleno alegre y sobretodo amado. Nadie me había amado así como tu nadie me ha hecho tan feliz
+quiero pasar muchos años a tu lado no me importa todo lo que tenga que seguir luchando y pasando yo quiero estar contigo siempre
+porque te amo porque eres una persona especial te quiero como nunca eres mi amor  y de verdad todos estos días han sido de lo mejor  y te seguiré cumpliendo lo que te dije desde el primer día. HACERTE FELIZ SIEMPRE 
+
+ </ion-card-content>
+</ion-card>
+ 
+</div>
+</ion-slide>
+<ion-slide>
+<div  *ngSwitchCase="'cuatro'"   >
+   <ion-item no-lines><ion-badge item-start  color="secondary">Pecho</ion-badge></ion-item>
+<ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Triserie 1</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('j0')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+  <ion-item>
+    {{r4[0].ej1}}
+  </ion-item>
+  <ion-item >
+    <ion-badge >{{r4[0].series}}</ion-badge> 
+    <ion-badge >{{r4[0].rep1}}</ion-badge> 
+  </ion-item>
+  <ion-item>
+    {{r4[0].ej2}}
+  </ion-item>
+  <ion-item>
+      <ion-badge >{{r4[0].series}}</ion-badge> 
+    <ion-badge>{{r4[0].rep2}}</ion-badge> 
+  </ion-item>
+  <ion-item>
+    {{r4[0].ej3}}
+  </ion-item>
+  <ion-item>
+      <ion-badge >{{r4[0].series}}</ion-badge> 
+    <ion-badge>{{r4[0].rep3}}</ion-badge> 
+  </ion-item>
+  <ion-card-content>
+   {{r4[0].detalle}} 
+ </ion-card-content>
+</ion-card>
+ <ion-item no-lines><ion-badge item-start  color="secondary">Tríceps</ion-badge></ion-item>
+<ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Triserie 2</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('j1')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+  <ion-item>
+    {{r4[1].ej1}}
+  </ion-item>
+  <ion-item >
+    <ion-badge >{{r4[1].series}}</ion-badge> 
+    <ion-badge >{{r4[1].rep1}}</ion-badge> 
+  </ion-item>
+  <ion-item>
+    {{r4[1].ej2}}
+  </ion-item>
+  <ion-item>
+      <ion-badge >{{r4[1].series}}</ion-badge> 
+    <ion-badge>{{r4[1].rep2}}</ion-badge> 
+  </ion-item>
+  <ion-item>
+    {{r4[1].ej3}}
+  </ion-item>
+  <ion-item>
+      <ion-badge >{{r4[1].series}}</ion-badge> 
+    <ion-badge>{{r4[1].rep3}}</ion-badge> 
+  </ion-item>
+  <ion-card-content>
+   {{r4[1].detalle}} 
+ </ion-card-content>
+</ion-card>
+ <ion-item no-lines><ion-badge item-start  color="secondary">Deltoides</ion-badge></ion-item>
+<ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Biserie 3</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('j2')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+  <ion-item>
+    {{r4[2].ej1}}
+  </ion-item>
+  <ion-item >
+    <ion-badge >{{r4[2].series}}</ion-badge> 
+    <ion-badge >{{r4[2].rep1}}</ion-badge> 
+  </ion-item>
+  <ion-item>
+    {{r4[2].ej2}}
+  </ion-item>
+  <ion-item>
+      <ion-badge >{{r4[2].series}}</ion-badge> 
+    <ion-badge>{{r4[2].rep2}}</ion-badge> 
+  </ion-item>
+  <ion-card-content>
+   {{r4[2].detalle}} 
+ </ion-card-content>
+</ion-card>
+
+<ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Biserie 4</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('j3')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+  <ion-item>
+    {{r4[3].ej1}}
+  </ion-item>
+  <ion-item >
+    <ion-badge >{{r4[3].series}}</ion-badge> 
+    <ion-badge >{{r4[3].rep1}}</ion-badge> 
+  </ion-item>
+  <ion-item>
+    {{r4[3].ej2}}
+  </ion-item>
+  <ion-item>
+      <ion-badge >{{r4[3].series}}</ion-badge> 
+    <ion-badge>{{r4[3].rep2}}</ion-badge> 
+  </ion-item>
+  <ion-card-content>
+   {{r4[3].detalle}} 
+ </ion-card-content>
+</ion-card>
+
+ 
+</div>
+</ion-slide>
+<ion-slide>
+<div  *ngSwitchCase="'cinco'"   >
+ <ion-item no-lines><ion-badge item-start  color="secondary">Cuádriceps</ion-badge></ion-item>
+<ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Biserie 1</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('v0')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+  <ion-item>
+    {{r5[0].ej1}}
+  </ion-item>
+  <ion-item >
+    <ion-badge >{{r5[0].series}}</ion-badge> 
+    <ion-badge >{{r5[0].rep1}}</ion-badge> 
+  </ion-item>
+  <ion-item>
+    {{r5[0].ej2}}
+  </ion-item>
+  <ion-item>
+      <ion-badge >{{r5[0].series}}</ion-badge> 
+    <ion-badge>{{r5[0].rep2}}</ion-badge> 
+  </ion-item>
+  <ion-card-content>
+   {{r5[0].detalle}} 
+ </ion-card-content>
+</ion-card>
+
+<ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Biserie 2</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('v1')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+  <ion-item>
+    {{r5[1].ej1}}
+  </ion-item>
+  <ion-item >
+    <ion-badge >{{r5[1].series}}</ion-badge> 
+    <ion-badge >{{r5[1].rep1}}</ion-badge> 
+  </ion-item>
+  <ion-item>
+    {{r5[1].ej2}}
+  </ion-item>
+  <ion-item>
+      <ion-badge >{{r5[1].series}}</ion-badge> 
+    <ion-badge>{{r5[1].rep2}}</ion-badge> 
+  </ion-item>
+  <ion-card-content>
+   {{r5[1].detalle}} 
+ </ion-card-content>
+</ion-card>
+
+<ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Biserie 3</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('v2')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+  <ion-item>
+    {{r5[2].ej1}}
+  </ion-item>
+  <ion-item >
+    <ion-badge >{{r5[2].series}}</ion-badge> 
+    <ion-badge >{{r5[2].rep1}}</ion-badge> 
+  </ion-item>
+  <ion-item>
+    {{r5[2].ej2}}
+  </ion-item>
+  <ion-item>
+      <ion-badge >{{r5[2].series}}</ion-badge> 
+    <ion-badge>{{r5[2].rep2}}</ion-badge> 
+  </ion-item>
+  <ion-card-content>
+   {{r5[2].detalle}} 
+ </ion-card-content>
+</ion-card>
+
+<ion-card >
+   <ion-card-header>
+    <ion-item>
+      <ion-label ><b>Biserie 4</b></ion-label>
+      <ion-checkbox color="secondary"  (click)="updateCucumber('v3')" ></ion-checkbox>
+    </ion-item>
+  </ion-card-header>
+  <ion-item>
+    {{r5[3].ej1}}
+  </ion-item>
+  <ion-item >
+    <ion-badge >{{r5[3].series}}</ion-badge> 
+    <ion-badge >{{r5[3].rep1}}</ion-badge> 
+  </ion-item>
+  <ion-item>
+    {{r5[3].ej2}}
+  </ion-item>
+  <ion-item>
+      <ion-badge >{{r5[3].series}}</ion-badge> 
+    <ion-badge>{{r5[3].rep2}}</ion-badge> 
+  </ion-item>
+  <ion-card-content>
+   {{r5[3].detalle}} 
+ </ion-card-content>
+</ion-card>
+
+</div>
+
+
+
+</ion-slide>
+
+
+</ion-slides>
